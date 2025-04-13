@@ -1,0 +1,107 @@
+/* PokemonCard.css */
+.pokemon-card {
+    width: 300px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .pokemon-card-header {
+    padding: 10px 15px;
+    text-align: left;
+  }
+  
+  .pokemon-id {
+    color: #a3afc0;
+    font-size: 14px;
+  }
+  
+  .pokemon-image-container {
+    background-color: #2c3e50;
+    border: 2px solid #3d5a80;
+    margin: 0 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .pokemon-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .pokemon-info {
+    padding: 15px;
+  }
+  
+  .pokemon-name-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .pokemon-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .pokemon-small-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .pokemon-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .stat-label {
+    width: 70px;
+    color: #a3afc0;
+    font-size: 14px;
+  }
+  
+  .stat-bar-container {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #3d4e63;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .stat-bar {
+    height: 100%;
+    border-radius: 3px;
+  }
+  
+  .health-bar {
+    background-color: #10b981;
+  }
+  
+  .stat-value {
+    font-size: 14px;
+    color: white;
+    min-width: 70px;
+    text-align: right;
+  }
+  
+  .attack-value, .defense-value {
+    font-size: 18px;
+    font-weight: bold;
+  }

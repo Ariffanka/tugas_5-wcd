@@ -1,0 +1,78 @@
+.card-detail-page {
+    /* Hapus properti yang membatasi lebar dan margin agar bisa mengikuti ukuran card satu kolom */
+    /* max-width: 600px;
+    margin: 20px auto; */
+    text-align: left; /* Reset text-align */
+    display: flex;
+    flex-direction: column; /* Pastikan flex direction column */
+    width: 280px; /* Sesuaikan dengan max-width card satu kolom di PC */
+    margin: 20px auto; /* Agar tetap di tengah */
+  }
+  
+  .card-detail-page h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 0 10px; /* Tambahkan padding agar sejajar dengan content */
+  }
+  
+  .card-detail-image-container {
+    width: 100%;
+    aspect-ratio: 140 / 200; /* Ukuran aspect ratio satu kolom */
+    margin-bottom: 0; /* Hapus margin bottom karena sudah diatur oleh card */
+    border-radius: 6px 6px 0 0; /* Terapkan border radius atas */
+    overflow: hidden;
+  }
+  
+  .card-detail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card-detail-page .card-content {
+    position: static; /* Ubah posisi agar tidak absolut */
+    background: none; /* Hapus background gradient */
+    color: #f8f8f2; /* Pastikan warna teks benar */
+    padding: 10px 14px; /* Sesuaikan padding dengan card satu kolom */
+    box-sizing: border-box;
+    width: 100%; /* Pastikan lebar 100% */
+  }
+  
+  .card-detail-page .card-content h3 {
+    margin-top: 0;
+    font-size: 1em; /* Sesuaikan dengan card satu kolom */
+    margin-bottom: 5px;
+  }
+  
+  .card-detail-page .card-content p {
+    font-size: 0.7em; /* Sesuaikan dengan card satu kolom */
+    -webkit-line-clamp: none; /* Tampilkan semua teks */
+    display: block; /* Reset display */
+    overflow: auto; /* Jika teks terlalu panjang, bisa di-scroll */
+    max-height: 100px; /* Atur tinggi maksimal jika perlu */
+  }
+  
+  .card-detail-page a {
+    /* color: #007bff; */
+    text-decoration: none;
+    display: block; /* Agar link mengambil seluruh lebar */
+    margin-top: 10px;
+  }
+  
+  .card-detail-page a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tambahkan media query jika Anda ingin ukuran card detail berbeda di mobile */
+  @media (max-width: 600px) {
+    .card-detail-page {
+      width: 100%; /* Lebar penuh di mobile */
+      margin: 10px auto;
+    }
+    .card-detail-image-container {
+      aspect-ratio: 140 / 200; /* Pertahankan aspect ratio */
+    }
+  }
+
+  

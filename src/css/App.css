@@ -1,0 +1,177 @@
+#root {
+  background-color: #111010; /* Latar belakang hitam gelap */
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 20px; */
+  text-align: center;
+  color: #f8f8f2; /* Warna teks default putih kehijauan */
+  /* border-radius: 50px; */
+}
+
+body {
+  background-color: #000000; /* Latar belakang body biru gelap */
+}
+
+.App{
+  border-radius: 100px;
+}
+
+/* Navbar Styling */
+.navbar {
+  color: #fff;
+  background-color: #111010; /* Navbar hitam kebiruan gelap */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom:; */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: #4bcffa; /* Warna ikon biru */
+}
+
+.navbar-text {
+  font-size: 1.2em;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+hr.hr-blue {
+  background-color: #4bcffa; /* Warna garis biru */
+  height: 2px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* Controls Styling */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 20px;
+}
+
+/* Sort By Styling */
+.sort-by {
+  display: flex;
+  align-items: center;
+  margin-left: 27px;
+}
+
+.sort-by label {
+  margin-right: 2px;
+  color: #fff;
+}
+
+.sort-select {
+  /* padding: 10px 20px; */
+  border: 1px solid #4bcffa; /* Border select biru terang */
+  border-radius: 4px;
+  font-size: 1em;
+  width: 120px;
+  height: 39px;
+  background-color: #1e272e; /* Latar belakang select hitam kebiruan */
+  color: #f8f8f2;
+}
+
+.sort-select option {
+  background-color: #1e272e;
+  color: #f8f8f2;
+}
+
+/* Column Toggle Styling */
+.column-toggle {
+  display: flex;
+  
+}
+
+.column-toggle button {
+  padding: 8px 15px;
+  border: 1px solid #4bcffa; /* Border tombol biru terang */
+  border-radius: 0;
+  cursor: pointer;
+  width: 40px;
+  background-color: #1e272e; /* Latar belakang tombol hitam kebiruan */
+  color: #fff;
+}
+
+.column-toggle button:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.column-toggle button:last-child {
+  margin-right: 30px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.column-toggle button.active {
+  background-color: #007bff; /* Warna aktif biru */
+  color: white;
+  border-color: #007bff;
+}
+
+.column-icon {
+  margin-right: 5px;
+  color: #4bcffa; /* Warna ikon biru terang */
+}
+
+/* Card Grid Wrapper & Other Styling */
+.card-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-detail {
+  background-color: #1e272e;
+  border: 1px solid #4bcffa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #f8f8f2;
+}
+
+.card-detail h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.card-detail button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.card-detail button:hover {
+  background-color: #4bcffa;
+}
+
+header {
+  text-align: center;
+  /* padding: 20px; */
+  color: #fff;
+}
+
+main {
+  /* padding:10px; */
+  min-width: 380px;
+}

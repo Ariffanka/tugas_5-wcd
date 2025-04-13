@@ -1,0 +1,212 @@
+.card-grid-container {
+    display: grid;
+    row-gap: 10px; /* Perkecil row-gap */
+    max-width: 1200px;
+    /* overflow-y: auto; */
+    margin: 0 auto;
+    /* max-height: 80vh; */
+    column-gap: 10px; /* Perkecil column-gap */
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Ukuran min card awal lebih kecil */
+  }
+
+  .card {
+    background-color: #1e272e;
+    border-radius: 6px; /* BorderRadius lebih kecil */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Shadow lebih kecil */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #007bff;
+    color: #f8f8f2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-image-container {
+    width: 100%;
+    aspect-ratio: 140 / 200; /* Lebar 140, Tinggi 200 */
+    overflow: hidden;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: 0;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 100%); /* Overlay lebih transparan */
+    color: white;
+    padding: 6px 8px; /* Padding lebih kecil */
+    box-sizing: border-box;
+  }
+
+  .card-content h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 1px; /* Margin bawah lebih kecil */
+    font-size: 0.8em; /* Font lebih kecil */
+  }
+
+  .card-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 0.6em; /* Font lebih kecil */
+    margin-bottom: 0;
+  }
+
+  .card:hover {
+    transform: scale(1.02); /* Skala hover lebih kecil */
+    border-radius: 6px;
+    box-shadow: 0 0 3px 1px #4bcffa; /* Shadow hover lebih kecil */
+  }
+
+  /* Styling untuk tampilan PC (lebar layar lebih dari 700px) */
+  @media (min-width: 701px) {
+    .card-grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Tampilan 2 kolom */
+      max-width: 290px; /* Lebar 2 kolom */
+      width: 290px ;
+      row-gap: 10px;
+      column-gap: 10px;
+    }
+
+    .card.full-image-card .card-image-container {
+      aspect-ratio: 140 / 200; /* Lebar 140, Tinggi 200 */
+    }
+
+    /* Gaya saat satu kolom di PC */
+    .card-grid-container[style*="repeat(1, 1fr)"] {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 280px !important; /* Lebar satu kolom diperbesar */
+      width: 280px !important;
+    }
+    .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card {
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+    .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-image-container {
+      aspect-ratio: 1 / 1; /* Lebar 140, Tinggi 200 */
+    }
+    .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-content {
+      padding: 12px 16px; /* Padding diperbesar */
+    }
+    .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-content h3 {
+      font-size: 1.2em; /* Font diperbesar */
+    }
+    .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-content p {
+      font-size: 0.8em; /* Font diperbesar */
+      -webkit-line-clamp: 2; /* Tampilkan lebih banyak baris */
+    }
+  }
+
+  /* Styling untuk tampilan tablet (lebar layar antara 601px dan 700px) */
+  @media (min-width: 601px) and (max-width: 700px) {
+    .card-grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Tampilan 2 kolom */
+      max-width: 290px; /* Lebar 2 kolom */
+      row-gap: 8px;
+      column-gap: 8px;
+    }
+    .card.full-image-card .card-image-container {
+      aspect-ratio: 140 / 200; /* Lebar 140, Tinggi 200 */
+    }
+  }
+
+  /* Styling untuk tampilan mobile (lebar layar 600px atau kurang) */
+  @media (max-width: 600px) {
+    .card-grid-container {
+      grid-template-columns: repeat(1, 1fr); /* Tampilan 1 kolom */
+      column-gap: 5px;
+      row-gap: 5px;
+    }
+    .card.full-image-card .card-image-container {
+        aspect-ratio: 140 / 200; /* Lebar 140, Tinggi 200 */
+      }
+  
+      /* Gaya saat satu kolom di PC */
+      .card-grid-container[style*="repeat(1, 1fr)"] {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 290px !important; /* Lebar satu kolom diperbesar */
+        width: 290px !important;
+      }
+      .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card {
+        width: 100% !important;
+        margin: 0 auto !important;
+      }
+      .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-image-container {
+        aspect-ratio: 1 / 1; /* Lebar 140, Tinggi 200 */
+      }
+      .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-content {
+        padding: 20px 16px; /* Padding diperbesar */
+      }
+      .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-content h3 {
+        font-size: 1.2em; /* Font diperbesar */
+      }
+      .card-grid-container[style*="repeat(1, 1fr)"] .card.full-image-card .card-content p {
+        font-size: 0.8em; /* Font diperbesar */
+        -webkit-line-clamp: 2; /* Tampilkan lebih banyak baris */
+      }
+  }
+
+  .card-link {
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    color: inherit; /* Mewarisi warna teks dari parent */
+    display: block; /* Membuat link mengisi seluruh area card */
+  }
+  
+  .card-detail-page {
+    padding: 20px;
+    background-color: #1e272e;
+    color: #f8f8f2;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .card-detail-page h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .card-detail-page h3 {
+    margin-top: 0;
+  }
+  
+  .card-detail-page a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .card-detail-page a:hover {
+    text-decoration: underline;
+  }
+
+  .card-detail-image-container {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden; /* Untuk memastikan gambar tidak keluar dari border-radius */
+  }
+  
+  .card-detail-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Mencegah spasi ekstra di bawah gambar */
+  }
