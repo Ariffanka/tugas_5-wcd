@@ -49,13 +49,13 @@ const CardDetailPage: React.FC = () => {
       <div className={styles.detailCardContent}>
         <div className={styles.titleContainer}>
           {/* <h2>{card.title}</h2> */}
-          {card.smallImageUrl && (
+          {/* {card.smallImageUrl && (
             <img 
               src={card.smallImageUrl} 
               alt={`${card.title} icon`} 
               className={styles.smallIcon} 
             />
-          )}
+          )} */}
         </div>
         
         {/* Stats Section */}
