@@ -17,13 +17,14 @@ interface ResponsiveCardGridProps {
 const ResponsiveCardGrid: React.FC<ResponsiveCardGridProps> = ({ cards, columns }) => {
   return (
     <div className="card-grid-container" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
-      {cards.map((card) => (
+      {cards.map((card, index) => (
         <Link
           key={card.id}
           to={`/card/${card.id}`}
           className="card-link"
         >
           <div className="card full-image-card">
+            <div className="card-index">{index + 1}</div>
             {card.imageUrl && (
               <div className="card-image-container">
                 <img src={card.imageUrl} alt={card.title} className="card-image" />

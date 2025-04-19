@@ -1,0 +1,108 @@
+/* src/css/addCardForm.css */
+.add-card-form-container {
+    background-color: #1e272e;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  .add-card-form-container h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Tambah margin bawah untuk ruang lebih */
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px; /* Tambah margin bawah untuk label */
+    color: #a3afc0;
+    font-size: 0.95em; /* Sedikit lebih besar */
+    font-weight: bold; /* Lebih menonjol */
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea,
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 12px; /* Tambah padding */
+    border: 1px solid #3d4e63;
+    border-radius: 4px;
+    background-color: #282c34;
+    color: #f8f8f2;
+    box-sizing: border-box;
+    font-size: 0.9em;
+  }
+  
+  .form-group textarea {
+    min-height: 80px; /* Tinggi minimal untuk textarea */
+  }
+  
+  .image-preview {
+    margin-top: 10px;
+    border: 1px solid #3d4e63;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #282c34;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Tambah gap antar tombol */
+    margin-top: 20px; /* Tambah margin atas untuk tombol */
+  }
+  
+  .form-actions button {
+    padding: 12px 20px; /* Padding tombol lebih besar */
+    border: none;
+    border-radius: 6px; /* BorderRadius lebih besar */
+    cursor: pointer;
+    font-size: 0.95em; /* Font tombol lebih besar */
+    font-weight: bold; /* Teks tombol bold */
+    transition: background-color 0.3s ease; /* Efek transisi hover */
+  }
+  
+  .form-actions button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .form-actions button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-actions button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .form-actions button[type="button"]:hover {
+    background-color: #545b62;
+  }
+  
+  .add-card-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Padding tombol tambah lebih besar */
+    border-radius: 6px; /* BorderRadius lebih besar */
+    cursor: pointer;
+    font-size: 0.95em; /* Font tombol tambah lebih besar */
+    font-weight: bold; /* Teks tombol tambah bold */
+    margin-left: 10px;
+    transition: background-color 0.3s ease; /* Efek transisi hover */
+  }
+  
+  .add-card-button:hover {
+    background-color: #1e7e34;
+  }
+  
+  .add-icon {
+    margin-right: 8px; /* Ruang untuk ikon tambah */
+  }

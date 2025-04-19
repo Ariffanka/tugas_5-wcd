@@ -124,3 +124,24 @@
 .detailCardLink:hover {
     text-decoration: underline;
 }
+
+/* detailCard.module.css */
+/* ... style lainnya ... */
+
+.imageUploadContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .uploadLabel {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .uploadInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
